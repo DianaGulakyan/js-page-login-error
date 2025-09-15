@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showPage('dashboardPage');
             updateDashboardCredentials();
         } else {
-            showError(error, "⚠️ Սխալ email կամ գաղտնաբառ");
+            showError(error, "⚠️ Incorrect email or password.");
         }
     };
 
@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const error = document.getElementById('registerError');
 
         if (users.find(u => u.email === email)) {
-            showError(error, "⚠️ Այս email-ով օգտատեր արդեն կա");
+            showError(error, "⚠️ A user with this email already exists");
         } else if (password !== confirm) {
-            showError(error, "⚠️ Գաղտնաբառերը չեն համընկնում");
+            showError(error, "⚠️ Passwords do not match");
         } else if (password.length < 6) {
-            showError(error, "⚠️ Գաղտնաբառը պետք է լինի առնվազն 6 նիշ");
+            showError(error, "⚠️ The password must be at least 6 characters long");
         } else if (!validateEmail(email)) {
-            showError(error, "⚠️ Սխալ email ձևաչափ");
+            showError(error, "⚠️ Invalid email format");
         } else {
             users.push({ name, email, password });
             localStorage.setItem('users', JSON.stringify(users));
@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const error = document.getElementById('forgotError');
 
         if (!validateEmail(email)) {
-            showError(error, "⚠️ Սխալ email ձևաչափ");
+            showError(error, "⚠️ Invalid email format");
         } else if (!users.find(u => u.email === email)) {
-            showError(error, "⚠️ Այս email-ով օգտատեր գոյություն չունի");
+            showError(error, "⚠️ No user exists with this email");
         } else {
             resetEmail = email;
             verificationCode = genCode();
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showError(error, "");
             showPage('resetPasswordPage');
         } else {
-            showError(error, "⚠️ Սխալ verification code");
+            showError(error, "⚠️ Invalid verification code");
         }
     };
 
@@ -144,11 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const error = document.getElementById('resetError');
 
         if (np !== cp) {
-            showError(error, "⚠️ Գաղտնաբառերը չեն համընկնում");
+            showError(error, "⚠️ Passwords do not match");
         } else if (np.length < 6) {
-            showError(error, "⚠️ Գաղտնաբառը պետք է լինի առնվազն 6 նիշ");
+            showError(error, "⚠️ The password must be at least 6 characters long");
         } else if (idx === -1) {
-            showError(error, "⚠️ Սխալ գործողություն");
+            showError(error, "⚠️ Invalid action");
         } else {
             users[idx].password = np;
             localStorage.setItem('users', JSON.stringify(users));
