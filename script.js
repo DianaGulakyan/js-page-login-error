@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showError(error, "");
             showPage('resetPasswordPage');
         } else {
-            showError(error, "⚠️ Սխալ կամ սխալ verification code");
+            showError(error, "⚠️ Սխալ verification code");
         }
     };
 
