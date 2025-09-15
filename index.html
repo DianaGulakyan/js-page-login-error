@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="container">
+            <div class="logo">
+                <h1>MyApp</h1>
+            </div>
+            <form id="loginForm" class="form">
+                <h2>Login</h2>
+                <div class="error-message" id="loginError"></div>
+                <div class="input-group">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="links">
+                    <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                    <a href="#" id="registerLink">Don't have an account? Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="registerPage" class="page">
+        <div class="container">
+            <div class="logo">
+                <h1>MyApp</h1>
+            </div>
+            <form id="registerForm" class="form">
+                <h2>Register</h2>
+                <div class="error-message" id="registerError"></div>
+                <div class="input-group">
+                    <input type="text" id="registerName" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="links">
+                    <a href="#" id="loginLink">Already have an account? Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Forgot Password Page -->
+    <div id="forgotPasswordPage" class="page">
+        <div class="container">
+            <div class="logo">
+                <h1>MyApp</h1>
+            </div>
+            <form id="forgotPasswordForm" class="form">
+                <h2>Forgot Password</h2>
+                <div class="error-message" id="forgotError"></div>
+                <div class="success-message" id="forgotSuccess"></div>
+                <div class="input-group">
+                    <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn">Send</button>
+                <div class="links">
+                    <a href="#" id="backToLoginLink">Back to Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Verification Code Page -->
+    <div id="verificationPage" class="page">
+        <div class="container">
+            <div class="logo">
+                <h1>MyApp</h1>
+            </div>
+            <form id="verificationForm" class="form">
+                <h2>Enter Verification Code</h2>
+                <p>We've sent a verification code to your email</p>
+                <div class="error-message" id="verificationError"></div>
+                <div class="input-group">
+                    <input type="text" id="verificationCode" placeholder="Enter 6-digit code" maxlength="6" required>
+                </div>
+                <button type="submit" class="btn">Verify</button>
+                <div class="links">
+                    <a href="#" id="resendCodeLink">Resend Code</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reset Password Page -->
+    <div id="resetPasswordPage" class="page">
+        <div class="container">
+            <div class="logo">
+                <h1>MyApp</h1>
+            </div>
+            <form id="resetPasswordForm" class="form">
+                <h2>Reset Password</h2>
+                <div class="error-message" id="resetError"></div>
+                <div class="input-group">
+                    <input type="password" id="newPassword" placeholder="New Password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" required>
+                </div>
+                <button type="submit" class="btn">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <!-- <div id="dashboardPage" class="page">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="logo">
+                    <h1>MyApp Dashboard</h1>
+                </div>
+                <button id="logoutBtn" class="btn logout-btn">Logout</button>
+            </div>
+            <div class="dashboard-content">
+                <h2>Welcome to your dashboard!</h2>
+                <p>You have successfully logged in.</p>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="dashboardPage" class="page">
+    <div class="dashboard-bg">
+        <div class="container dashboard-container">
+            <div class="dashboard-header">
+                <div class="logo">
+                    <h1>🚀 MyApp Dashboard</h1>
+                </div>
+                <button id="logoutBtn" class="btn logout-btn">Logout</button>
+            </div>
+            <div class="dashboard-content">
+                <div class="welcome-card">
+                    <h2>Welcome to your dashboard!</h2>
+                    <p>You have successfully logged in.</p>
+                    <div class="demo-credentials">
+                        <h3>Here you can find ....</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
