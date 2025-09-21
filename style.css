@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #ff0000 0%, #a243bc 100%);
+    background: linear-gradient(135deg, #882eef 0%, #a243bc 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -37,7 +37,6 @@ body {
 }
 
 .logo h1 {
-    color: #f3007d ;
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -71,13 +70,13 @@ body {
 
 .input-group input:focus {
     outline: none;
-    border-color:#a243bc ;
+    border-color:#a243bc;
 }
 
 .btn {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #ff0000 0%, #a243bc 100%);
+    background: linear-gradient(135deg, #882eef 0%, #9b33f1 100%);
     color: white;
     border: none;
     border-radius: 5px;
@@ -96,7 +95,7 @@ body {
 }
 
 .links a {
-    color: #a243bc ;
+    color: #a243bc;
     text-decoration: none;
     font-size: 14px;
     margin: 0 10px;
@@ -133,12 +132,30 @@ body {
     display: block;
 }
 
-/* Dashboard Styles */
+/* Dashboard */
+.pagee {
+    display: none;
+    margin: 0 auto;
+    background-color: white;
+    width: 1550px;
+    height: 740px;
+}
+.pagee.active {
+    display: block;
+}
+
 #dashboardPage .container {
     max-width: 800px;
     width: 90%;
 }
-
+.dashboard-content h2{
+   font-size: 40px;
+   margin-top: 20px;
+}
+.dashboard-content p{
+    margin-top: 10px;
+    color: #b4b4b4;
+}
 .dashboard-header {
     display: flex;
     justify-content: space-between;
@@ -154,128 +171,198 @@ body {
     margin-bottom: 0;
     background: #dc3545;
     font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .logout-btn:hover {
     background: #c82333;
 }
 
-.dashboard-content {
+.cards {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.card {
+    width: 280px;
+    height: 100px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    padding: 2rem 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.166);
 }
-
-.dashboard-content h2 {
-    color: #333;
-    margin-bottom: 1rem;
+.card h3 {
+    text-align: left;
+    color: #5a2eca;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
-
-.dashboard-content p {
+.card p{
+    text-align: left;
+    color: #b4b4b4;
+}
+.activities {
+    height: 120px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.activities p{
     color: #666;
-    font-size: 16px;
+    margin-top: 30px;
+}
+.menu {
+    width: 220px;
+    background: #fff;
+    border-right: 1px solid #eee;
+    padding: 20px;
+    list-style: none;
+}
+.menu li {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.menu li.active,
+.menu li:hover {
+    background: #5a2eca;
+    color: #fff;
 }
 
-.dashboard-bg {
-    min-height: 100vh;
-    width: 100vw;
-    background: linear-gradient(135deg, #ff0000 0%, #a243bc 100%);
+.people {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 40px;
 }
-.dashboard-container {
-    background: rgba(255,255,255,0.95);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(44,62,80,0.2);
-    padding: 40px 60px;
-    max-width: 600px;
-    width: 100%;
-}
-.dashboard-header {
+
+.logoo{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+    margin-left: 100px;
 }
-.dashboard-header .logo h1 {
-    font-size: 2.2rem;
-    color: #2575fc;
-    margin: 0;
+.logoo img{
+    width: 60px;
+    height: 50px;
 }
-.logout-btn {
-    background: #2575fc;
-    color: #fff;
-    border: none;
-    padding: 10px 28px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s;
+.logoo h1{
+    font-size: 20px;
+    margin-top: 20px;
 }
-.logout-btn:hover {
-    background: #6a11cb;
-}
-.dashboard-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.welcome-card {
-    background: #f7faff;
-    border-radius: 12px;
-    padding: 30px 24px;
-    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
-    text-align: center;
-    width: 100%;
-}
-.welcome-card h2 {
-    color: #2575fc;
-    margin-bottom: 10px;
-}
-.demo-credentials {
-    margin-top: 24px;
-    background: #e3f0ff;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 1px 6px rgba(44,62,80,0.05);
-}
-.demo-credentials h3 {
-    margin: 0 0 8px 0;
-    color: #2575fc;
-    font-size: 1.1rem;
-}
-.demo-credentials ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.demo-credentials li {
-    font-size: 1rem;
-    margin-bottom: 4px;
-}
+/* Responsive */
 @media (max-width: 700px) {
-    .dashboard-container {
+    #dashboardPage .container {
         padding: 20px 10px;
         max-width: 98vw;
     }
-    .welcome-card {
-        padding: 18px 8px;
+    .cards {
+        flex-direction: column;
     }
 }
-
 
 @media (max-width: 480px) {
     .container {
         padding: 1.5rem;
         margin: 1rem;
     }
-    
     .logo h1 {
         font-size: 2rem;
     }
-    
     .dashboard-header {
         flex-direction: column;
         gap: 1rem;
     }
+}
+
+
+
+table{
+    width: 1200px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th{
+    background: #f4f4f4;
+}
+button{
+    cursor: pointer;
+}
+
+.btn-add{
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-left: 1100px;
+}
+.btn-edit {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+.btn-delete{
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+.btn-cancel{
+    background: #777;
+    color: white;
+    border:none;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+.modal-content input{
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+}
+.modal-content button{
+    margin: 10px 5px;
+}
+
+.student{
+    display: none;
+}
+.student.active {
+    display: block;
 }

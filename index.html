@@ -11,10 +11,12 @@
     <div id="loginPage" class="page active">
         <div class="container">
             <div class="logo">
-                <h1>MyApp</h1>
+                <img src="images/Screenshot 2025-09-20 123933.jpg" alt="nkar" ">
+                <h2 class="h1">EduAdmin</h2>
+                
             </div>
             <form id="loginForm" class="form">
-                <h2>Login</h2>
+                <h2>Welcome Back</h2>
                 <div class="error-message" id="loginError"></div>
                 <div class="input-group">
                     <input type="email" id="loginEmail" placeholder="Email" required>
@@ -22,7 +24,7 @@
                 <div class="input-group">
                     <input type="password" id="loginPassword" placeholder="Password" required>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn">Sign in</button>
                 <div class="links">
                     <a href="#" id="forgotPasswordLink">Forgot Password?</a>
                     <a href="#" id="registerLink">Don't have an account? Sign up</a>
@@ -35,10 +37,12 @@
     <div id="registerPage" class="page">
         <div class="container">
             <div class="logo">
-                <h1>MyApp</h1>
+                <img src="images/Screenshot 2025-09-20 123933.jpg" alt="nkar" ">
+                <h2 class="h1">EduAdmin</h2>
+                
             </div>
             <form id="registerForm" class="form">
-                <h2>Register</h2>
+                <h2>Create Account</h2>
                 <div class="error-message" id="registerError"></div>
                 <div class="input-group">
                     <input type="text" id="registerName" placeholder="Full Name" required>
@@ -102,65 +106,193 @@
         </div>
     </div>
 
-    <!-- Reset Password Page -->
-    <div id="resetPasswordPage" class="page">
-        <div class="container">
-            <div class="logo">
-                <h1>MyApp</h1>
-            </div>
-            <form id="resetPasswordForm" class="form">
-                <h2>Reset Password</h2>
-                <div class="error-message" id="resetError"></div>
-                <div class="input-group">
-                    <input type="password" id="newPassword" placeholder="New Password" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" required>
-                </div>
-                <button type="submit" class="btn">Reset Password</button>
-            </form>
-        </div>
-    </div>
 
-    <!-- Dashboard Page -->
-    <!-- <div id="dashboardPage" class="page">
-        <div class="container">
-            <div class="dashboard-header">
-                <div class="logo">
-                    <h1>MyApp Dashboard</h1>
-                </div>
-                <button id="logoutBtn" class="btn logout-btn">Logout</button>
-            </div>
-            <div class="dashboard-content">
-                <h2>Welcome to your dashboard!</h2>
-                <p>You have successfully logged in.</p>
-            </div>
-        </div>
-    </div> -->
+    <div id="dashboardPage" class="pagee">
+            <div class="containerr">
+                <div class="dashboard-header">
+                    <div class="logoo">
+                        <img src="images/Screenshot 2025-09-20 123933.jpg" alt="">
+                        <h1>EduAdmin</h1>
 
-    <div id="dashboardPage" class="page">
-    <div class="dashboard-bg">
-        <div class="container dashboard-container">
-            <div class="dashboard-header">
-                <div class="logo">
-                    <h1>🚀 MyApp Dashboard</h1>
-                </div>
-                <button id="logoutBtn" class="btn logout-btn">Logout</button>
-            </div>
-            <div class="dashboard-content">
-                <div class="welcome-card">
-                    <h2>Welcome to your dashboard!</h2>
-                    <p>You have successfully logged in.</p>
-                    <div class="demo-credentials">
-                        <h3>Here you can find ....</h3>
-                        
                     </div>
+                    <button id="logoutBtn" class="btn logout-btn">Logout</button>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="people">
+                    <aside>
+                        <ul class="menu">
+                            <li class="active">📊 Dashboard</li>
+                            <li>👩‍🎓 Students</li>
+                            <li>👨‍🏫 Teachers</li>
+                            <li>🏫 Classes</li>
+                          </ul>
+                    </aside>
+                    <div>
+                        <div class="dashboard-content">
+                            <h2>Dashboard</h2>
+                            <p>Welcome your school management system</p>
+                        </div>
+                        <div class="cards">
+                            <div class="card"><h3>1,234</h3><p>Total Students</p></div>
+                            <div class="card"><h3>89</h3><p>Total Teachers</p></div>
+                            <div class="card"><h3>45</h3><p>Total Classes</p></div>
+                            <div class="card"><h3>12</h3><p>Active Sections</p></div>
+                          </div>
+                          <section class="activities">
+                            <h3>Recent Activities</h3>
+                            <p>No recent activities to display.</p>
+                          </section>
+                    </div>
 
+
+                    <div id="studentpage" class="student">
+                        <h1>Students</h1>
+                        <button class="btn-add" onclick="openAddModal()">Add student</button>
+                        <table id="Table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>City</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Diana</td>
+                                    <td>gulakyan04@mail.ru</td>
+                                    <td>Ijevan</td>
+                                    <td>
+                                        <button class="btn-edit" onclick="openEditModal(this)">✏️ </button>
+                                        <button class="btn-delete" onclick="openDeleteModal(this)">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Varduhi</td>
+                                    <td>galstyan04@mail.ru</td>
+                                    <td>Ijevan</td>
+                                    <td>
+                                        <button class="btn-edit" onclick="openEditModal(this)">✏️ </button>
+                                        <button class="btn-delete" onclick="openDeleteModal(this)">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>        
+
+                        <!-- Add modal (ավելացնել)-->
+                        <div id="add" class="modal">
+                            <div class="modal-content">
+                                <h3>Add students</h3>
+                                <input type="text" id="name" placeholder="Լրացրեք ձեր անունը">
+                                <input type="email" id="email" placeholder="Լրացրեք ձեր mail-ը">
+                                <input type="text" id="city" placeholder="Լրացրեք ձեր քաղաքը">
+                                <br>
+                                <button class="btn-add" onclick="saveAdd()">Add</button>
+                                <button class="btn-cancel" onclick="closeModal('add')" >Cancle</button>
+                            </div>
+                        </div>
+                                
+
+                        <!-- edit modal (խմբագրել) -->
+                        <div id="edit" class="modal">
+                            <div class="modal-content">
+                                <h3>Edit students</h3>
+                                <input type="text" id="editname" placeholder="Լրացրեք ձեր անունը">
+                                <input type="email" id="editemail" placeholder="Լրացրեք ձեր mail-ը">
+                                <input type="text" id="editcity" placeholder="Լրացրեք ձեր քաղաքը">
+                                <br>
+                                <button class="btn-edit" onclick="saveEdit()">Save</button>
+                                <button class="btn-cancel" onclick="closeModal('edit')" >Cancle</button>
+                            </div>
+                        </div>
+
+                        <!-- Delete modal (ջնջել)-->
+                        <div id="delete" class="modal">
+                            <div class="modal-content">
+                                <h3>Վստա՞հ եք, որ ուզում եք ջնջել։</h3>
+                                <p>Այս գործողությունը հետ բերել հնարավոր չէ։</p>
+                                <button  class="btn-delete" onclick="confirmDelete()">Delete</button>
+                                <button class="btn-cancel" onclick="closeModal('delete')" >Cancle</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="teacherspage" class="student">
+                        <h1>Teachers</h1>
+                        <button class="btn-add" onclick="openAddModal()">+ Add teacher</button>
+                        <table id="Table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>City</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DR. Sarah Wilson</td>
+                                    <td>Wilson22@mail.ru</td>
+                                    <td>America</td>
+                                    <td>
+                                        <button class="btn-edit" onclick="openEditModal(this)">✏️ </button>
+                                        <button class="btn-delete" onclick="openDeleteModal(this)">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Prof. Michael Brown</td>
+                                    <td>MichaelB33@mail.ru</td>
+                                    <td>Ijevan</td>
+                                    <td>
+                                        <button class="btn-edit" onclick="openEditModal(this)">✏️ </button>
+                                        <button class="btn-delete" onclick="openDeleteModal(this)">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>        
+
+                        <!-- Add modal (ավելացնել)-->
+                        <div id="add" class="modal">
+                            <div class="modal-content">
+                                <h3>Add teachers</h3>
+                                <input type="text" id="name" placeholder="Լրացրեք ձեր անունը">
+                                <input type="email" id="email" placeholder="Լրացրեք ձեր mail-ը">
+                                <input type="text" id="city" placeholder="Լրացրեք ձեր քաղաքը">
+                                <br>
+                                <button class="btn-add" onclick="saveAdd()">Add</button>
+                                <button class="btn-cancel" onclick="closeModal('add')" >Cancle</button>
+                            </div>
+                        </div>
+                                
+
+                        <!-- edit modal (խմբագրել) -->
+                        <div id="edit" class="modal">
+                            <div class="modal-content">
+                                <h3>Edit students</h3>
+                                <input type="text" id="editname" placeholder="Լրացրեք ձեր անունը">
+                                <input type="email" id="editemail" placeholder="Լրացրեք ձեր mail-ը">
+                                <input type="text" id="editcity" placeholder="Լրացրեք ձեր քաղաքը">
+                                <br>
+                                <button class="btn-edit" onclick="saveEdit()">Save</button>
+                                <button class="btn-cancel" onclick="closeModal('edit')" >Cancle</button>
+                            </div>
+                        </div>
+
+                        <!-- Delete modal (ջնջել)-->
+                        <div id="delete" class="modal">
+                            <div class="modal-content">
+                                <h3>Վստա՞հ եք, որ ուզում եք ջնջել։</h3>
+                                <p>Այս գործողությունը հետ բերել հնարավոր չէ։</p>
+                                <button  class="btn-delete" onclick="confirmDelete()">Delete</button>
+                                <button class="btn-cancel" onclick="closeModal('delete')" >Cancle</button>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+    </div>
+
+
+               
     <script src="script.js"></script>
 </body>
 </html>
